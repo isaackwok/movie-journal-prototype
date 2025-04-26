@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Nothing+You+Could+Do&display=swap');
+
+/* 全域字體與色彩設定 */
+body {
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  background: #18181b;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  max-width: 100vw;
+}
+
+.main-title {
+  font-family: 'Nothing You Could Do', cursive;
+  font-size: 32px;
+  font-weight: 400;
+  margin: 24px 0 18px 0;
+  text-align: left;
+  letter-spacing: 1px;
+}
+
+.section-title {
+  font-family: 'Avenir Next', 'Avenir', 'Segoe UI', 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.card-title {
+  font-family: 'Avenir Next', 'Avenir', 'Segoe UI', 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.card {
+  background: #23232a;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px #0002;
+  overflow: hidden;
+  margin-bottom: 18px;
+  padding: 0;
+  transition: box-shadow 0.15s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px #0003;
+}
+
+.card-content {
+  padding: 14px 12px 10px 12px;
+}
+
+/* 雙欄卡片布局（mobile-first） */
+@media (max-width: 500px) {
+  .journal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 0 0 24px 0;
+  }
+}
+@media (min-width: 501px) {
+  .journal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin: 0 0 32px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  background: #18181b;
+  display: block;
+}
+
+
+/* 其他細節調整 */
+
+.credits-block-detail {
+  background: #f7f7f9;
+  border-radius: 0;
+  padding: 24px 20px;
+  margin: 40px auto 0 auto;
+  max-width: 400px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 15px;
+  color: #232323;
+  letter-spacing: 0.2px;
+}
+.credits-block-detail strong {
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+
+.credits-block {
+  margin: 32px 0 0 0;
+  padding: 16px 0 0 0;
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+  letter-spacing: 0.5px;
+}
+.credits-block a {
+  color: #888;
+  text-decoration: underline dotted;
+  transition: color 0.2s;
+}
+.credits-block a:hover {
+  color: #444;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}

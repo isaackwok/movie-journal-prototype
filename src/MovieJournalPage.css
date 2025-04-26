@@ -1,0 +1,36 @@
+.iphone-container.journal-fullscreen {
+  max-width: 430px;
+  border-radius: 32px;
+  margin: 0 auto;
+  box-shadow: 0 8px 32px #2222;
+  background: #fff;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.journal-card {
+  width: 100%;
+  min-height: 120px;
+  max-height: 80vh;
+  margin: 0 auto 24px auto;
+  overflow: visible;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  transition: none;
+}
+
+.journal-footer-gradient {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 90px;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(to top, #fff 80%, rgba(255,255,255,0) 100%);
+}
