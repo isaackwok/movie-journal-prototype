@@ -126,7 +126,13 @@ const MovieJournalPage: React.FC<Props> = ({ movie, onBack, onSave }) => {
       setSelectedBackdrops={setSelectedBackdrops}
       onViewMore={() => setShowDrawer(true)}
     />,
-    <NoteSection key="note" note={note} setNote={setNote} loading={loading} />,
+    <NoteSection
+      key="note"
+      note={note}
+      setNote={setNote}
+      loading={loading}
+      movie={movie}
+    />,
   ];
 
   return (
@@ -317,6 +323,7 @@ const MovieJournalPage: React.FC<Props> = ({ movie, onBack, onSave }) => {
                     onClick={step === 1 ? () => setStep(2) : undefined}
                   >
                     <NoteSection
+                      movie={movie}
                       note={note}
                       setNote={setNote}
                       loading={loading}

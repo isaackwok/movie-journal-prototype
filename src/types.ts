@@ -9,6 +9,11 @@ export interface Movie {
   backdrops: string[]; // 多張劇照
   director?: string;
   cast: string[]; // 前三位主要演員
+  overview: string;
+  genres: { id: number; name: string }[];
+  runtime: number;
+  vote_average: number;
+  production_companies: { id: number; name: string }[];
 }
 
 export interface Journal {

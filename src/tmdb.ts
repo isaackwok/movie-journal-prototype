@@ -20,6 +20,7 @@ export async function searchMovies(
     data.results.map(async (item: any) => {
       const detail = await getMovieDetail(item.id, language);
       const credits = await getMovieCredits(item.id);
+      const infoDetail = await getMovieInfoDetail(item.id);
       return {
         id: item.id,
         title: item.title,
@@ -28,6 +29,10 @@ export async function searchMovies(
         backdrops: detail.backdrops,
         director: credits.director,
         cast: credits.cast,
+        overview: item.overview,
+        genres: infoDetail.genres,
+        runtime: infoDetail.runtime,
+        production_companies: infoDetail.production_companies,
       };
     })
   );
@@ -43,6 +48,18 @@ export async function getMovieDetail(movieId: number, language = "zh-TW") {
   return {
     posters: imgData.posters.map((p: any) => `${IMAGE_BASE}${p.file_path}`),
     backdrops: imgData.backdrops.map((b: any) => `${IMAGE_BASE}${b.file_path}`),
+  };
+}
+// 取得電影細節（多張 poster/backdrop）
+export async function getMovieInfoDetail(movieId: number, language = "zh-TW") {
+  const res = await fetch(
+    `${BASE_URL}/movie/${movieId}?api_key=${API_KEY}&language=${language}`
+  );
+  const data = await res.json();
+  return {
+    genres: data.genres,
+    runtime: data.runtime,
+    production_companies: data.production_companies,
   };
 }
 
