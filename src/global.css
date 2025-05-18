@@ -1,6 +1,6 @@
 /* global.css - 全域樣式設定 */
-@import url('https://fonts.googleapis.com/css?family=Nothing+You+Could+Do&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Nothing+You+Could+Do&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 :root {
   /* 主色與輔色 */
@@ -29,7 +29,7 @@
 }
 
 body {
-  font-family: 'Inter', system-ui, Arial, sans-serif;
+  font-family: "Inter", system-ui, Arial, sans-serif;
   background: #f5f5f5;
   color: var(--color-black);
   margin: 0;
@@ -57,11 +57,11 @@ body {
   max-width: 393px;
   width: 100vw;
   position: relative;
-  background: #18181b;
+  background: rgb(17, 17, 17);
   border-radius: 32px;
   box-shadow: 0 2px 24px #0008;
-  min-height: 100vh;
-  overflow: hidden;
+  height: 100vh;
+  overflow-y: scroll;
   padding-left: 20px;
   padding-right: 20px;
   box-sizing: border-box;
@@ -74,7 +74,7 @@ body {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: linear-gradient(135deg,#fbbf24,#f472b6);
+  background: linear-gradient(135deg, #fbbf24, #f472b6);
   color: #fff;
   font-size: 36px;
   border: none;
@@ -85,18 +85,25 @@ body {
   justify-content: center;
 }
 
-
 .special-font {
-  font-family: 'Nothing You Could Do', cursive;
+  font-family: "Nothing You Could Do", cursive;
 }
 
 .title-font {
-  font-family: 'Avenir Next', 'Avenir', 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Avenir Next", "Avenir", "Helvetica Neue", Arial, sans-serif;
 }
 
 .heading {
   font-size: var(--font-heading);
   font-weight: var(--weight-semi-bold);
+  position: sticky;
+  top: 0;
+  background: rgb(17, 17, 17);
+  z-index: 100;
+  padding: 16px;
+  width: calc(100% + 8px);
+  box-sizing: content-box;
+  margin-bottom: 24px;
 }
 
 .title {
@@ -125,7 +132,9 @@ body {
   font-weight: var(--weight-semi-bold);
 }
 
-textarea, input, .step-content {
+textarea,
+input,
+.step-content {
   width: 100%;
   box-sizing: border-box;
 }

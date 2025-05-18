@@ -5,10 +5,10 @@ export interface Movie {
   id: number;
   title: string;
   year?: string;
-  posters: string[];      // 多張 poster
-  backdrops: string[];    // 多張劇照
+  posters: string[]; // 多張 poster
+  backdrops: string[]; // 多張劇照
   director?: string;
-  cast: string[];         // 前三位主要演員
+  cast: string[]; // 前三位主要演員
 }
 
 export interface Journal {
@@ -19,7 +19,7 @@ export interface Journal {
   director: string;
   cast: string[];
   backdrops: string[];
-  emotion: { label: string; icon: string; reason: string; };
+  emotion: { label: string; icon: string; reason: string };
   note: string;
   date: string;
   createdAt: string;

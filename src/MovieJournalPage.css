@@ -32,5 +32,5 @@
   height: 90px;
   z-index: 0;
   pointer-events: none;
-  background: linear-gradient(to top, #fff 80%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(to top, #fff 80%, rgba(255, 255, 255, 0) 100%);
 }

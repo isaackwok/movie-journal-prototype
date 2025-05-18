@@ -26,23 +26,27 @@
 ### 安裝步驟
 
 1. 複製專案到本地：
+
    ```bash
    git clone https://github.com/jonaswhite/movie-journal-prototype.git
    cd movie-journal-prototype
    ```
 
 2. 安裝依賴：
+
    ```bash
    npm install
    ```
 
 3. 設定環境變數：
    建立 `.env` 檔案並添加以下內容：
+
    ```
    VITE_TMDB_API_KEY=d4c9092656c3aa3cfa5761fbf093f7d0
    ```
 
 4. 啟動開發伺服器：
+
    ```bash
    npm run dev
    ```
@@ -62,6 +66,7 @@
 ### 開發流程
 
 1. 從 `main` 分支建立新的功能分支：
+
    ```bash
    git checkout main
    git pull
@@ -69,12 +74,14 @@
    ```
 
 2. 在分支上進行開發並提交變更：
+
    ```bash
    git add .
    git commit -m "描述你的變更"
    ```
 
 3. 推送分支到遠端儲存庫：
+
    ```bash
    git push -u origin feature/your-feature-name
    ```

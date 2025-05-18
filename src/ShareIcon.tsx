@@ -1,7 +1,10 @@
 // 這個檔案由 AI 自動產生，SVG 內容來自 ~/Downloads/output.svg
-import React from 'react';
+import React from "react";
 
-const ShareIcon: React.FC<{ size?: number; style?: React.CSSProperties }> = ({ size = 28, style }) => (
+const ShareIcon: React.FC<{ size?: number; style?: React.CSSProperties }> = ({
+  size = 28,
+  style,
+}) => (
   <svg
     width={size}
     height={size}
@@ -23,4 +26,3 @@ const ShareIcon: React.FC<{ size?: number; style?: React.CSSProperties }> = ({ s
 );
 
 export default ShareIcon;
-
