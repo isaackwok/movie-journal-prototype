@@ -56,7 +56,6 @@ body {
 .iphone-container {
   max-width: 393px;
   width: 100vw;
-  margin: 36px auto 0 auto;
   position: relative;
   background: #18181b;
   border-radius: 32px;

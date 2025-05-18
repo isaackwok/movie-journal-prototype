@@ -86,7 +86,7 @@ const HomePage: React.FC<HomePageProps> = ({ journals, onSelectJournal, onCreate
     <button
       onClick={onCreateJournal}
       style={{
-        position: 'fixed',
+        position: 'absolute',
         right: 24,
         bottom: 32,
         width: 56,
